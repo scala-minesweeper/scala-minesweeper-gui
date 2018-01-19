@@ -11,13 +11,11 @@ class ActorResolver(config: Config, actorSystem: ActorSystem) {
   private val publisherActorName = config.getString("akka.minesweeper.publisherActor")
 
   def resolveGameController(): ActorRef = {
-    println("Resolve")
     val gameController: ActorSelection = actorSystem.actorSelection(controllerActorName)
     Await.result(gameController.resolveOne(5.seconds), 5.seconds)
   }
 
   def resolvePublisher(): ActorRef = {
-    println("Resolve")
     val publisher: ActorSelection = actorSystem.actorSelection(publisherActorName)
     Await.result(publisher.resolveOne(5.seconds), 5.seconds)
   }
