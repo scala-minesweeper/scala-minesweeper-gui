@@ -24,15 +24,15 @@ class NewGameGui(controller: GuiController) extends Frame {
     }
 
     private lazy val textFieldRows = new DigitTextField {
-      text = "5"
+      text = "10"
       columns = 10
     }
     private lazy val textFieldCols = new DigitTextField {
-      text = "5"
+      text = "10"
       columns = 10
     }
     private lazy val textFieldBombs = new DigitTextField {
-      text = "9"
+      text = "10"
       columns = 10
     }
 
